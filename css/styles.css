@@ -1,107 +1,131 @@
-* {
-    background-color: #ffffff;
+body {
+    background-color: #f9f9f9;
+    font-family: verdana;
+}
+.container {
+    background-color: #fff;
+    max-width: 1060px;
+    margin: auto;
+    box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.2);
+    height: 100%;
 }
 /* HEADER (logo)*/
-#header {
-    margin: 50px 50px 39px 49px;
+.header {
+    margin: 0 50px 0 49px;
+    padding-top: 50px;
+    padding-bottom: 39px;
 }
+
 /* NAVIGATION PANE */
-#navigation {
+.navigation {
     list-style-type: none;
-    margin: 0 49px;
-    padding: 1px;
+    margin: 0 47px;
     overflow: hidden;
-    background-color: #5b5b5b;
-    }
-#navigation li {
-    float: left;
+    background: linear-gradient(to bottom, #5e5e5e, #444343);
 }
-#navigation li a {
+
+.navigation li {
+    cursor: pointer;
+    float: left;
+    height: 40px;
+}
+
+.nav_option {
     display: block;
     color: #ffffff;
-    background-color: #5b5b5b;
     font-family: sans-serif;
+    font-size: 0.9rem;
     text-align: center;
-    padding: 0.7em 21px;
+    line-height: 40px;
     text-decoration: none;
+    height: 40px;
+    width: 101px;
 }
-#navigation li a:hover {
-    background-color: #434343;
-    padding: 0.7em 20px;
+.nav_option:hover {
+    background: linear-gradient(to bottom, #4a4a4a, #2e2e2e);
     border-left: 1px solid grey;
     border-right: 1px solid grey;
     box-sizing: border-box;
 }
+
 /* SIDEBAR LEFT -- MENU */
-#menu {
+.menu {
     float: left;
     width: 240px;
-    margin: 2.5em 3em;
-}
-#menu ul {
+    margin: 40px 47px;
     list-style-type: none;
 }
-#menu li a {
+.menu_option a {
     display: block;
-    color: #5b5b5b;
-    background-color: #ffffff;
-    font-family: verdana;
-    font-size: 0.8em;
+    font-size: 0.8rem;
     text-align: left;
-    padding: 1em 1.2em;
+    line-height: 40px;
+    padding-left: 20px;
     text-decoration: none;
-    border: 1px solid lightgray;
-    border-collapse: collapse;
-}
-#menu ul a {
-    text-decoration: none;
-}
-#menu a:hover {
-    background-color: #f9f9f9;
-    padding: 1em 1.2em 1em 2.4em;
-    border-collapse: collapse;
-}
-/* CONTENT */
-#content {
-    border: 1px solid transparent;
-    padding:0;
-    margin: 2.5em 3em;
-}
-#content img {
     border: 1px solid lightgrey;
+    border-bottom: none;
+    height: 41px;
+    color: #5b5b5b;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.menu_option a:last-child {
+    border-bottom: 1px solid lightgrey;
+}
+.menu_option a:hover {
+    background-color: #f9f9f9;
+    padding-left: 40px;
+    box-sizing: border-box;
+    color: #2c2c2c;
+    text-decoration: none;
+}
+
+/* CONTENT */
+.content {
+    float: right;
+    width: calc(100% - 240px - 47px*3 - 2px);
+    margin: 40px 47px 40px 0;
+    box-sizing: border-box;
+}
+.content img {
+    border: 1px solid lightgrey;
+    width: 100%;
     margin: 0;
     padding: 2.5em 5em;
+    box-sizing: border-box;
 }
-#content p {
-    margin: 0 0 0 289px;
-    padding: 2.5em 1em;
+.content p {
     color: #2c2c2c;
-    font-family: verdana;
+    padding-top: 40px;
     font-size: 0.8em;
     text-align: left;
     line-height: 1.5em;
 }
 
+.clearfix {
+    clear: both;
+}
+
 /* FOOTER */
-#footer {
+.footer {
     list-style-type: none;
-    margin: 3em 49px 3em;
+    margin: 0 49px 3em;
     overflow: hidden;
-    font-family: verdana;
     font-size: 0.8em;
     background-color: #e1e1e1;
     padding: 1em 1.2em;
     text-decoration: none;
     color: #2c2c2c;
 }
-#footer li {
+.footer li {
     float: left;
     background-color: #e1e1e1;
     color: #2c2c2c;
     padding: 0 1.2em;
     text-decoration: none;
 }
-#footer a {
+.footer a {
     float: left;
     display: block;
     color: #2c2c2c;
@@ -110,16 +134,15 @@
     text-decoration: none;
     padding: 0;
 }
-#footer a:hover {
+.footer a:hover {
     text-decoration: underline;
 }
-#footer p {
+.footer p {
     float: right;
     color: #2c2c2c;
     background-color: #e1e1e1;
     padding:0;
     margin: 0;
-    font-family: verdana;
     font-size: 1em;
     text-align: right;
 }
